@@ -1,11 +1,31 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App.js';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import ActivityList from "./activity-list";
+import Profile from "./profile";
+import Nav from "./Nav";
+import {
+  Routes,
+  Route,
+  Outlet,
+  Link,
+  createMemoryRouter,
+  createRoutesFromElements,
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router-dom";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+const router = createBrowserRouter(
+  createRoutesFromElements(
+    <>
+      <Route path="activities" element={<ActivityList />} />
+      <Route path="profile" element={<Profile />} />
+    </>
+  )
+);
+
+ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <App />
+    <RouterProvider router={router} />
   </React.StrictMode>
 );

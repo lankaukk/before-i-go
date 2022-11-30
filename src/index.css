@@ -96,7 +96,7 @@ body {
   inline-size: var(--w);
   position: relative;
   touch-action: manipulation;
-  -webkit-appearance: none;
+  
 }
 
 .rating::-webkit-slider-runnable-track {
@@ -104,4 +104,8 @@ body {
   block-size: 100%;
   mask: repeat left center/var(--starsize) var(--symbol);
   -webkit-mask: repeat left center/var(--starsize) var(--symbol);
+}
+
+.category-container::-webkit-scrollbar {
+  display: none;
 }
