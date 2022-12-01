@@ -3,6 +3,10 @@ body {
   margin: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 @font-face {
   font-family: primary;
   src: url(https://cdn.utopia.pizza/editor/sample-assets/stretchpro.woff);

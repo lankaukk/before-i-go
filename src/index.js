@@ -4,6 +4,8 @@ import "./globals.css";
 import ActivityList from "./activity-list";
 import Profile from "./profile";
 import ErrorPage from "./error-page";
+import { Activity } from "./activity";
+import { Header } from "./header";
 
 import {
   Route,
@@ -17,22 +19,26 @@ import {
 export const Layout = () => {
   return (
     <div>
-      {/* A "layout route" is a good place to put markup you want to
+      <div>
+        <Header>
+          {/* A "layout route" is a good place to put markup you want to
           share across all the pages on your site, like navigation. */}
+          <div style={{ width: "10vw", fontFamily: 'var(--secondary)',  padding: '15px 0'}}>
+            <Link style={{padding: 15}} to="/">Activities</Link>
+            <br></br>
+            <br></br>
+            <Link style={{padding: 15}} to="/profile">Profile</Link>
+            {/* <br></br>
+            <br></br>
+            <Link to="/one">Activity 1</Link> */}
+          </div>
+        </Header>
 
-      <li>
-        <Link to="/">Activities</Link>
-      </li>
-      <li>
-        <Link to="/profile">Profile</Link>
-      </li>
-
-      <hr />
-
-      {/* An <Outlet> renders whatever child route is currently active,
+        {/* An <Outlet> renders whatever child route is currently active,
           so you can think about this <Outlet> as a placeholder for
           the child routes we defined above. */}
-      <Outlet />
+        <Outlet />
+      </div>
     </div>
   );
 };
@@ -42,6 +48,7 @@ const router = createBrowserRouter(
     <Route path="/" element={<Layout />} errorElement={<ErrorPage />}>
       <Route path="/" element={<ActivityList />} />
       <Route path="profile" element={<Profile />} />
+      <Route path="one" element={<Activity />} />
     </Route>
   )
 );

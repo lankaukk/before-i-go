@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { UserProPic } from "./svgs.js";
 import {
   AquaMan,
@@ -11,21 +10,10 @@ import {
   Cryophile,
 } from "./stickers.js";
 import { DecorativeLines, Checkerboard } from "./cardcomponents/decorations.js";
-import { Header } from "./header.js";
 
-export var Profile = () => {
+export const Profile = () => {
   return (
     <div style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
-      <Header path="/">
-        <div
-          style={{
-            height: 20,
-            width: 20,
-            borderRadius: 20,
-            background: "var(--purple)",
-          }}
-        ></div>
-      </Header>
       <div
         style={{
           height: "100%",

@@ -7,7 +7,7 @@ import {
   Snowflake,
 } from './svgs.js'
 
-export var AquaMan = (props) => {
+export const AquaMan = (props) => {
   return (
     <div
       style={{
@@ -25,7 +25,7 @@ export var AquaMan = (props) => {
   )
 }
 
-export var Wonderer = (props) => {
+export const Wonderer = (props) => {
   return (
     <div
       style={{
@@ -56,7 +56,7 @@ export var Wonderer = (props) => {
   )
 }
 
-export var BirbWatcher = (props) => {
+export const BirbWatcher = (props) => {
   return (
     <div
       style={{
@@ -90,7 +90,7 @@ export var BirbWatcher = (props) => {
   )
 }
 
-export var Mixologist = (props) => {
+export const Mixologist = (props) => {
   return (
     <div
       style={{
@@ -122,7 +122,7 @@ export var Mixologist = (props) => {
   )
 }
 
-export var Tropicologist = (props) => {
+export const Tropicologist = (props) => {
   return (
     <div
       style={{
@@ -146,7 +146,7 @@ export var Tropicologist = (props) => {
   )
 }
 
-export var RiskTaker = (props) => {
+export const RiskTaker = (props) => {
   return (
     <div
       style={{
@@ -172,7 +172,7 @@ export var RiskTaker = (props) => {
   )
 }
 
-export var Cryophile = (props) => {
+export const Cryophile = (props) => {
   return (
     <div
       style={{
