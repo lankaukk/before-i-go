@@ -12,7 +12,7 @@ export var ActivityList = () => {
         width: "100vw",
         height: "75vh",
         background: "var(--orange)",
-        overflow: 'hidden',
+        overflow: "hidden",
         display: "flex",
         flexDirection: "row",
         alignItems: "flex-start",
@@ -26,9 +26,12 @@ export var ActivityList = () => {
           alignItems: "flex-start",
           gap: 25,
           width: "10vw",
-          height: '100%',
+          height: "100%",
           overflowY: "scroll",
-          overflowX: 'hidden'
+          overflowX: "hidden",
+          borderRight: '1px solid var(--purple)',
+          boxShadow: "20px 0px 30px var(--purple)",
+          zIndex: 999,
         }}
       >
         <div
@@ -56,11 +59,11 @@ export var ActivityList = () => {
       <div
         style={{
           width: "90vw",
-          height: '100%',
+          height: "100%",
           display: "flex",
           flexDirection: "row",
           overflowY: "hidden",
-          overflowX: 'scroll',
+          overflowX: "scroll",
           gap: 0,
         }}
       >
@@ -68,7 +71,7 @@ export var ActivityList = () => {
           <div
             style={{
               width: 834,
-              height: '100%',
+              height: "100%",
               backgroundColor: "var(--yellow)",
               display: "flex",
               flexDirection: "column",
@@ -76,14 +79,17 @@ export var ActivityList = () => {
             }}
           >
             <ImageContainer imageUrl="images/flamingo.jpg" alt="flamingo" />
-            <Name style={{padding: 30}} text="Hire a Pool Flamingo as a Butler" />
+            <Name
+              style={{ padding: 30 }}
+              text="Hire a Pool Flamingo as a Butler"
+            />
           </div>
         </Link>
         <Link to="/two">
           <div
             style={{
               width: 834,
-              height: '100%',
+              height: "100%",
               backgroundColor: "var(--orange)",
               display: "flex",
               flexDirection: "column",
@@ -91,14 +97,14 @@ export var ActivityList = () => {
             }}
           >
             <ImageContainer imageUrl="images/northernlights.jpg" alt="vibes" />
-            <Name style={{padding: 30}} text="See Theee Northern Ligghtts" />
+            <Name style={{ padding: 30 }} text="See Theee Northern Ligghtts" />
           </div>
         </Link>
         <Link to="/three">
           <div
             style={{
               width: 834,
-              height: '100%',
+              height: "100%",
               backgroundColor: "var(--yellow)",
               display: "flex",
               flexDirection: "column",
@@ -106,7 +112,10 @@ export var ActivityList = () => {
             }}
           >
             <ImageContainer imageUrl="images/martini.jpg" alt="vibes" />
-            <Name style={{padding: 30}} text="Drink A Martini on Mount Everest" />
+            <Name
+              style={{ padding: 30 }}
+              text="Drink A Martini on Mount Everest"
+            />
           </div>
         </Link>
         {/* <div

@@ -6,12 +6,25 @@ import { Rating } from "./cardcomponents/rating.js";
 import { Stamp } from "./cardcomponents/stamp.js";
 import { ImageContainer } from "./cardcomponents/imagecontainer.js";
 
+import { Form } from "react-router-dom";
+import { activites } from "./data";
+
 export const Activity = () => {
+  const activity = {
+    name: "Hire a Pool Flamingo as a Butler",
+    date: "08 28 2019",
+    description:
+      "Not as attentive as a real Butler, and only being able to hold drinks seems more like a luxury than work. Nonethelesss, we will keep him.",
+    imageUrl: "/images/flamingo.jpg",
+    rating: 5,
+  };
+
   return (
     <div
+      id="activity"
       style={{
         width: 834,
-        height: 767,
+        height: "100%",
         backgroundColor: "var(--yellow)",
         display: "flex",
         flexDirection: "column",
@@ -35,14 +48,14 @@ export const Activity = () => {
           }}
         >
           <Stamp
-            name="08 28 2021"
+            name={activity.date}
             style={{ top: -160, left: 40 }}
             color="var(--yellow)"
           />
-          <Description description="Not as attentive as a real Butler, and only being able to hold drinks seems more like a luxury than work. Nonethelesss, we will keep him." />
+          <Description description={activity.description} />
         </div>
       </div>
-      <ImageContainer imageUrl="images/flamingo.jpg" />
+      <ImageContainer imageUrl={activity.imageUrl} />
       <div
         style={{
           display: "flex",
@@ -54,9 +67,87 @@ export const Activity = () => {
           zIndex: 10,
         }}
       >
-        <Name text="Hire a Pool Flamingo as a Butler" style={{ padding: 0 }} />
-        <Rating rating={2} style={{}} color="var(--yellow)" />
+        <Name text={activity.name} />
+        <Rating rating={activity.rating} color="var(--yellow)" />
       </div>
     </div>
   );
 };
+
+function Favorite({ contact }) {
+  // yes, this is a `let` for later
+  let favorite = contact.favorite;
+  return (
+    <Form method="post">
+      <button
+        name="favorite"
+        value={favorite ? "false" : "true"}
+        aria-label={favorite ? "Remove from favorites" : "Add to favorites"}
+      >
+        {favorite ? "★" : "☆"}
+      </button>
+    </Form>
+  );
+}
+
+export default Activity;
+
+// export const DemoContact = () => {
+//   return (
+//     <div id="activity">
+//       <div>
+//         <img
+//           key={contact.avatar}
+//           src={contact.avatar || null}
+//         />
+//       </div>
+
+//       <div>
+//         <h1>
+//           {contact.first || contact.last ? (
+//             <>
+//               {contact.first} {contact.last}
+//             </>
+//           ) : (
+//             <i>No Name</i>
+//           )}{" "}
+//           <Favorite contact={contact} />
+//         </h1>
+
+//         {contact.twitter && (
+//           <p>
+//             <a
+//               target="_blank"
+//               href={`https://twitter.com/${contact.twitter}`}
+//             >
+//               {contact.twitter}
+//             </a>
+//           </p>
+//         )}
+
+//         {contact.notes && <p>{contact.notes}</p>}
+
+//         <div>
+//           <Form action="edit">
+//             <button type="submit">Edit</button>
+//           </Form>
+//           <Form
+//             method="post"
+//             action="destroy"
+//             onSubmit={(event) => {
+//               if (
+//                 !confirm(
+//                   "Please confirm you want to delete this record."
+//                 )
+//               ) {
+//                 event.preventDefault();
+//               }
+//             }}
+//           >
+//             <button type="submit">Delete</button>
+//           </Form>
+//         </div>
+//       </div>
+//     </div>
+//   );
+// };
