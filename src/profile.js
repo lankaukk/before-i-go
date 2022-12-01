@@ -1,235 +1,191 @@
-import React from "react"
-// import { UserProPic } from './svgs.js'
-// import {
-//   AquaMan,
-//   Wonderer,
-//   BirbWatcher,
-//   Mixologist,
-//   Tropicologist,
-//   RiskTaker,
-//   Cryophile,
-// } from './stickers.js'
-// import {
-//   DecorativeLines,
-//   Checkerboard,
-// } from './cardcomponents/decorations.js'
+import React from "react";
+import { Link } from "react-router-dom";
+import { UserProPic } from "./svgs.js";
+import {
+  AquaMan,
+  Wonderer,
+  BirbWatcher,
+  Mixologist,
+  Tropicologist,
+  RiskTaker,
+  Cryophile,
+} from "./stickers.js";
+import { DecorativeLines, Checkerboard } from "./cardcomponents/decorations.js";
+import { Header } from "./header.js";
 
 export var Profile = () => {
   return (
-    <div>
+    <div style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
+      <Header path="/">
+        <div
+          style={{
+            height: 20,
+            width: 20,
+            borderRadius: 20,
+            background: "var(--purple)",
+          }}
+        ></div>
+      </Header>
       <div
         style={{
-          width: '100%',
-          background: 'var(--white)',
-          zIndex: 100,
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          padding: '44px 0px 25px',
-          gap: '26px',
-          boxShadow: '0px 5px 30px #10629290',
-          left: 0,
+          height: "100%",
+          display: "flex",
+          flexDirection: "row",
+          background: "var(--orange)",
         }}
       >
         <div
           style={{
-            width: '100%',
-            color: 'var(--orange)',
-            fontFamily: 'var(--primary)',
-            textAlign: 'center',
-            fontWeight: 400,
-            fontStyle: 'normal',
-            border: '0px solid rgb(255, 174, 52, 1)',
-            fontSize: '22px',
-            textShadow:
-              '0px 1px 1px #646464, 0px 4px 1px rgba(0, 0, 0, 0.25)',
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            padding: "40px",
+            width: "30vw",
           }}
         >
-          Things I want to do
-        </div>
-        <div style={{ width: '130%' }}>
+          <UserProPic
+            style={{
+              borderRadius: "50%",
+              border: "6px solid var(--purple)",
+              overflow: "hidden",
+              background: "var(--orange)",
+              position: "relative",
+              width: 160,
+              height: 160,
+            }}
+            color="var(--purple)"
+          />
+
           <div
             style={{
-              color: 'var(--orange)',
-              fontFamily: 'var(--primary)',
-              textAlign: 'center',
-              fontWeight: 400,
-              fontStyle: 'normal',
-              border: '0px solid rgb(255, 174, 52, 1)',
-              fontSize: '72px',
-              lineHeight: '125%',
-              textShadow:
-                '0px 1px 1px #646464, 0px 8px 1px rgba(0, 0, 0, 0.25)',
+              color: "var(--purple)",
+              fontFamily: "primary",
+              fontSize: "38px",
             }}
           >
-            BBeffore I Go
+            McKayyyla Lannkau
+          </div>
+
+          <div
+            style={{
+              fontFamily: "var(--secondary)",
+              color: "var(--purple)",
+              fontWeight: 700,
+              fontSize: 18,
+              lineHeight: "144%",
+              marginBottom: 5,
+              position: "relative",
+              height: 26,
+              display: "flex",
+              justifyContent: "space-between",
+            }}
+          >
+            <div>Primary Location: </div>
+            <div>New York City, USA</div>
+          </div>
+          <div
+            style={{
+              fontFamily: "var(--secondary)",
+              color: "var(--purple)",
+              fontWeight: 700,
+              fontSize: 18,
+              lineHeight: "144%",
+              marginBottom: 5,
+              position: "relative",
+              height: 26,
+              display: "flex",
+              justifyContent: "space-between",
+            }}
+          >
+            <div>Living Since: </div>
+            <div>1999</div>
+          </div>
+          <div
+            style={{
+              fontFamily: "var(--secondary)",
+              color: "var(--purple)",
+              fontWeight: 700,
+              fontSize: 18,
+              lineHeight: "144%",
+              marginBottom: 5,
+              position: "relative",
+              height: 26,
+              display: "flex",
+              justifyContent: "space-between",
+            }}
+          >
+            <div>Life Level: </div>
+            <div>Advanced</div>
           </div>
         </div>
-      </div>
-      <div
-        style={{
-          width: '100%',
-          display: 'flex',
-          flexDirection: 'column',
-        }}
-      >
-        <div
+        <Checkerboard
           style={{
-            display: 'flex',
-            flexDirection: 'column',
-            gap: 30,
+            display: "flex",
+            flexDirection: "row",
+            flexWrap: "wrap",
+            alignItems: "center",
+            justifyContent: "flex-start",
+            gap: 40,
             padding: 40,
-            margin: 'auto',
-            width: 740,
-            height: 600,
-            justifyContent: 'center',
+            alignSelf: "stretch",
+            height: "85%",
+            width: "50vw",
           }}
+          color1="var(--yellow)"
+          color2="var(--orange)"
         >
-          <div
+          <Cryophile
             style={{
-              color: 'var(--purple)',
-              fontFamily: 'var(--primary)',
-              fontSize: '38px',
+              boxShadow: "0px 2px 4px 5px rgb(0, 0, 0, 0.12)",
+              borderRadius: "50%",
+              zIndex: 999,
             }}
-          >
-            McKayyyla Lannkauu
-          </div>
-          <div
+          />
+          <BirbWatcher
             style={{
-              display: 'flex',
-              flexDirection: 'row',
-              gap: 40,
+              width: 121,
+              boxShadow: "0px 2px 4px 5px rgb(0, 0, 0, 0.12)",
+              padding: "10px 0px 10px 10px",
             }}
-          >
-            <div
-              style={{
-                display: 'flex',
-                flexDirection: 'column',
-                gap: 10,
-                flexGrow: 1,
-              }}
-            >
-              <div
-                style={{
-                  background: 'var(--white)',
-                  padding: 10,
-                  borderRadius: '5px',
-                  fontFamily: 'var(--secondary)',
-                  color: 'var(--purple)',
-                  fontWeight: 700,
-                  fontSize: 18,
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  boxShadow: 'inset 2px 2px 10px #10629299',
-                }}
-              >
-                <div>Primary Location: </div>
-                <div>New York City, USA</div>
-              </div>
-              <div
-                style={{
-                  background: 'var(--white)',
-                  padding: 10,
-                  borderRadius: '5px',
-                  fontFamily: 'var(--secondary)',
-                  color: 'var(--purple)',
-                  fontWeight: 700,
-                  fontSize: 18,
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  boxShadow: 'inset 2px 2px 10px #10629299',
-                }}
-              >
-                <div>Living Since: </div>
-                <div>1999</div>
-              </div>
-              <div
-                style={{
-                  background: 'var(--white)',
-                  padding: 10,
-                  borderRadius: '5px',
-                  fontFamily: 'var(--secondary)',
-                  color: 'var(--purple)',
-                  fontWeight: 700,
-                  fontSize: 18,
-                  display: 'flex',
-                  justifyContent: 'space-between',
-                  boxShadow: 'inset 2px 2px 10px #10629299',
-                }}
-              >
-                <div>Life Level: </div>
-                <div>Advanced</div>
-              </div>
-            </div>
-            {/* <UserProPic
-              style={{
-                borderRadius: '50%',
-                border: '6px solid var(--orange)',
-                overflow: 'hidden',
-                background: 'var(--purple)',
-                height: 160,
-                width: 160,
-              }}
-              color='var(--orange)'
-            /> */}
-          </div>
-        </div>
-        {/* <Cryophile
-          style={{
-            position: 'absolute',
-            left: 210,
-            top: 620,
-          }}
-        />
-        <Wonderer
-          style={{
-            position: 'absolute',
-            left: 11,
-            top: 199,
-            transform: 'rotate(-15deg)',
-          }}
-        />
-        <BirbWatcher
-          style={{
-            position: 'absolute',
-            left: 107,
-            top: 235.5,
-            width: 121,
-          }}
-        />
-        <RiskTaker
-          style={{
-            position: 'absolute',
-            left: 678,
-            top: 666.5,
-          }}
-        />
-        <AquaMan
-          style={{
-            position: 'absolute',
-            left: 574,
-            top: 188,
-          }}
-        />
-        <Mixologist
-          style={{
-            position: 'absolute',
-            left: 705,
-            top: 352,
-            transform: 'rotate(5deg)',
-          }}
-        />
-        <Tropicologist
-          style={{
-            position: 'absolute',
-            left: 136,
-            top: 680,
-            transform: 'rotate(-19deg)',
-          }}
-        /> */}
+          />
+          <RiskTaker
+            style={{
+              boxShadow: "0px 2px 4px 5px rgb(0, 0, 0, 0.12)",
+              transform: "rotate(42deg)",
+              borderRadius: "5px",
+            }}
+          />
+          <Mixologist
+            style={{
+              transform: "rotate(5deg)",
+              boxShadow: "0px 2px 4px 5px rgb(0, 0, 0, 0.12)",
+              padding: "5px 0",
+            }}
+          />
+          <AquaMan
+            style={{
+              borderRadius: "50%",
+              boxShadow: "0px 2px 4px 5px rgb(0, 0, 0, 0.12)",
+            }}
+          />
+          <Wonderer
+            style={{
+              transform: "rotate(-15deg)",
+              boxShadow: "0px 2px 4px 5px rgb(0, 0, 0, 0.12)",
+              borderRadius: "0 0 30% 30% ",
+            }}
+          />
+          <Tropicologist
+            style={{
+              borderRadius: "30px 30px 0 0",
+              boxShadow: "0px 2px 4px 5px rgb(0, 0, 0, 0.12)",
+              paddingTop: 5,
+            }}
+          />
+        </Checkerboard>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default Profile;

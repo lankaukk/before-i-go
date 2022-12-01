@@ -14,25 +14,24 @@ body {
 }
 
 :root {
-  --white: #acc4c1;
-  --purple: #d4ffa3;
-  --orange: #3c4ba0;
-  --yellow: #bd5c81;
+  --white: #eeeeea;
+  --purple: #621c75;
+  --orange: #ffae34;
+  --yellow: #f1d972;
 
   --dark-grey: #646464;
-  --mid-grey: #D2D2CF;
-  --light-grey: #EEEEEA;
+  --mid-grey: #d2d2cf;
+  --light-grey: #eeeeea;
 
   --primary: primary;
   --primary-basic: primary-basic;
-  --secondary: 'Roboto Mono';
-  --safety: 'sans-serif';
+  --secondary: "Roboto Mono";
+  --safety: "sans-serif";
 }
 
 .star {
   margin: -42px 0px;
   animation: 3s infinite alternate star-bounce;
-
 }
 
 @keyframes star-bounce {
@@ -96,11 +95,14 @@ body {
   inline-size: var(--w);
   position: relative;
   touch-action: manipulation;
-  
 }
 
 .rating::-webkit-slider-runnable-track {
-  background: linear-gradient(to var(--dir), var(--fill) 0 var(--x), var(--fillbg) 0 var(--x));
+  background: linear-gradient(
+    to var(--dir),
+    var(--fill) 0 var(--x),
+    var(--fillbg) 0 var(--x)
+  );
   block-size: 100%;
   mask: repeat left center/var(--starsize) var(--symbol);
   -webkit-mask: repeat left center/var(--starsize) var(--symbol);

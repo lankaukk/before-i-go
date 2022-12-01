@@ -57,6 +57,8 @@ export var Checkerboard = (props) => {
         height: 60,
         ...props.style,
       }}
-    />
+    >
+      {props.children}
+    </div>
   )
 }

@@ -14,13 +14,15 @@ export var CategoryItem = (props) => {
         flexDirection: "row",
         justifyContent: "center",
         alignItems: "center",
-        padding: "0px 22px",
+        padding: "0 22px",
+        margin: "0 10px",
         boxShadow: "0px 6px 1px rgba(0, 0, 0, 0.25)",
         borderRadius: "50px",
         border: "4px solid var(--purple)",
         userSelect: "none",
         cursor: "pointer",
         backgroundColor: selected ? "var(--white)" : "var(--purple)",
+        alignSelf: "stretch",
         ...props.style,
       }}
     >
@@ -56,14 +58,12 @@ export var ClearCategoriesButton = (props) => {
         border: "4px solid var(--purple)",
         backgroundColor: "var(--white)",
         color: "var(--purple)",
-
         //overflow: "hidden",
         width: "53.5px",
         height: "53.5px",
         // padding: "0px 18px",
         userSelect: "none",
         cursor: "pointer",
-
         fontSize: 100,
       }}
     >
